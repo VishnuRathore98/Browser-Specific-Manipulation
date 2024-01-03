@@ -1,5 +1,8 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +34,7 @@ public class PageLoadChromeJupiterTest {
         driver = WebDriverManager.chromedriver().capabilities(options).create();
     }
     @Test
-    void test(){
+    public void test(){
         long initMillis = System.currentTimeMillis();
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
         Duration elapsed = Duration.ofMillis(System.currentTimeMillis() - initMillis);

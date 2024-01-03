@@ -19,8 +19,8 @@ public class MobileEmulationByAttributesTest {
         ChromeOptions options = new ChromeOptions();
         Map<String,Object> mobileEmulation = new HashMap<>();
         Map<String,Object> deviceMetrics = new HashMap<>();
-        deviceMetrics.put("width",360);
-        deviceMetrics.put("height",640);
+        deviceMetrics.put("width",160);
+        deviceMetrics.put("height",340);
         deviceMetrics.put("pixelRatio",3.0);
         deviceMetrics.put("touch",true);
         mobileEmulation.put("deviceMetrics",deviceMetrics);

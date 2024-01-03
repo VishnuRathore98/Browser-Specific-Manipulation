@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -17,7 +18,7 @@ public class MobileEmulationByDeviceTest {
     void setup() {
         ChromeOptions options = new ChromeOptions();
         Map<String, Object> mobileEmulation = new HashMap<>();
-        mobileEmulation.put("deviceName","iPhone XR");
+        mobileEmulation.put("deviceName","iPhone 6/7/8");
         options.setExperimentalOption("mobileEmulation",mobileEmulation);
         driver = new ChromeDriver(options);
 //        driver = WebDriverManager.chromedriver().capabilities(options).create();
