@@ -1,11 +1,14 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
+
+import java.util.Optional;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class Test {
+public class Testing implements HasDevTools {
 //    static WebDriver driver;
 
 //    public static void main(String[] args) {
@@ -28,5 +31,15 @@ public class Test {
 
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/get-user-media.html");
+    }
+
+    @Override
+    public DevTools getDevTools() {
+        return HasDevTools.super.getDevTools();
+    }
+
+    @Override
+    public Optional<DevTools> maybeGetDevTools() {
+        return Optional.empty();
     }
 }

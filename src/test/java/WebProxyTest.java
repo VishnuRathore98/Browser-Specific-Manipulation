@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class WebProxy {
+public class WebProxyTest {
     WebDriver driver;
     ChromeOptions options;
     Proxy proxy;

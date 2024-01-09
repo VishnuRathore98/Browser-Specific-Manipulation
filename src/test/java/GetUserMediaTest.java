@@ -1,4 +1,4 @@
-// Test setup granting synthetic user media in Chrome.
+// Testing setup granting synthetic user media in Chrome.
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
